@@ -1,0 +1,19 @@
+// 使用到的一些公共样式
+
+// 水平垂直居中
+.self-center (@pos: absolute) {
+  position: @pos;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// 内容撑满父级容器
+.self-fill (@pos:absolute) {
+  position: @pos;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}

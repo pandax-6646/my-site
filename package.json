@@ -1,0 +1,36 @@
+{
+  "name": "my-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --color",
+    "build": "vue-cli-service build",
+    "tsAvatar": "vue serve ./src/components/Avatar/test.vue",
+    "tsIcon": "vue serve ./src/components/Icon/test.vue",
+    "tsPager": "vue serve ./src/components/Pager/test.vue",
+    "tsEmpty": "vue serve ./src/components/Empty/test.vue",
+    "tsImageLoader": "vue serve ./src/components/ImageLoader/test.vue",
+    "tsContact": "vue serve ./src/components/Contact/test.vue",
+    "tsMenu": "vue serve ./src/components/Menu/test.vue",
+    "tsSiteAside": "vue serve ./src/components/SiteAside/test.vue",
+    "tsLayout": "vue serve ./src/components/Layout/test.vue",
+    "tsToast": "vue serve ./src/components/Toast/test.vue",
+    "tsLoading": "vue serve ./src/components/Loading/test.vue",
+    "tsRightHierarchyList": "vue serve ./src/views/Blog/components/test-RightHierarchyList.vue"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "mockjs": "^1.1.0",
+    "querystring": "^0.2.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
