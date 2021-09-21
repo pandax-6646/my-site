@@ -3,7 +3,7 @@ import "./mock"     //导入moke数据
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import toast from './utils/Toast'
+import toast from './utils/toast'
 
 import vLoading from "./directive/loading"
 
@@ -25,13 +25,13 @@ new Vue({
 
 
 // 测试mock数据接口
-// import * as blogApi from "./api/blog"
+import * as blogApi from "./api/blog"
 
 
 // blogApi.getBlogTypes().then((res) => {
 //   console.log("博客分类的数据", res);
 // })
 
-// blogApi.getBlogs(2, 20, 3).then( (res) => {
-//   console.log("分页博客的数据", res)
-// })
+blogApi.getBlog(2, 20, 3).then( (res) => {
+  console.log("saiojdosjd", res)
+})

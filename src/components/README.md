@@ -2,8 +2,8 @@
 
 https://github.com/DuYi-Edu/DuYi-Vue2/blob/main/1.%20%E5%85%A5%E9%97%A8/09.%20%E7%BB%84%E4%BB%B6%E7%BB%83%E4%B9%A0/my-site/src/components/README.md
 
-
 ## Avatar（用户头像组件）
+
 ### 属性：
 | 属性名  | 含义                | 类型   | 必填 | 默认值 |
 | ------ | ------------------ | ------ | ---- | ----- |
@@ -137,7 +137,6 @@ https://github.com/DuYi-Edu/DuYi-Vue2/blob/main/1.%20%E5%85%A5%E9%97%A8/09.%20%E
 网站侧边栏
 
 宽度和高度撑满外层容器
-
 
 
 

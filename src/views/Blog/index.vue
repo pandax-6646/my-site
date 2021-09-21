@@ -14,25 +14,12 @@ import BlogList from "./components/BlogList";
 import BlogCategory from "./components/BlogCategory";
 export default {
   name:"blog",
-  data () {
-    return{
-      data:[],
-    }
-  },
+ 
   components: {
     Layout,
     BlogList,
     BlogCategory
   },
-
-  created:{
-
-
-  },
-
-  methods:{
-
-  }
 };
 </script>
 

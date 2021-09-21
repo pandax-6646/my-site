@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-list-container">
+  <div class="blog-list-container" ref="blog_list" v-loading="isLoading">
     <ul>
       <li v-for="item in data.rows" :key="item.id">
         <div class="thumb" v-if="item.thumb">
@@ -23,7 +23,14 @@
     </ul>
 
     <!-- 分页 -->
-    <Pager :currPage="1" :total="data.total" :limit="10" />
+    <Pager
+      v-if="data.total"
+      :currPage="routeInfo.page"
+      :total="data.total"
+      :limit="routeInfo.limit"
+      :visibleNumber="10"
+      @pageChange="handlePageChange"
+    />
   </div>
 </template>
 <script>
@@ -38,10 +45,58 @@ export default {
   components: {
     Pager,
   },
+
+  computed: {
+    // 获取路由信息
+    routeInfo() {
+      const categoryId = +this.$route.params.categoryId || -1;
+      const page = +this.$route.query.page || 1;
+      const limit = +this.$route.query.limit || 10;
+      return {
+        categoryId,
+        page,
+        limit,
+      };
+    },
+  },
+
   methods: {
     formatTime,
     async fetchData() {
       return await getBlogs();
+    },
+
+    handlePageChange(newPage) {
+      const query = {
+        limit: this.routeInfo.limit,
+        page: newPage,
+      };
+      // 跳转时有分类
+      if (this.routeInfo.categoryId === -1) {
+        this.$router.push({
+          name: "Blog",
+          query,
+        });
+
+        // 跳转时无分类页码
+      } else {
+        this.$router.push({
+          name: "CategoryBlog",
+          query,
+          params: {
+            categoryId: this.routeInfo.categoryId,
+          },
+        });
+      }
+    },
+  },
+  watch: {
+    // 监听路由的变化
+    async $route() {
+      this.$refs.blog_list.scrollTop = 0;
+      this.isLoading = true;
+      this.data = await this.fetchData();
+      this.isLoading = false;
     },
   },
 };
@@ -53,11 +108,11 @@ export default {
   line-height: 1.7;
   position: relative;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid black;
+  scroll-behavior: smooth;
 }
 li {
   display: flex;

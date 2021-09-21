@@ -1,10 +1,17 @@
 <template>
-  <ul class="RightHierarchyList">
+  <ul class="rightHierarchyList">
     <li v-for="(item, i) in list" :key="i">
       <span :class="{ active: item.isSelect }" @click="handleClick(item)">
         {{ item.name }}
       </span>
-      <RightHierarchyList :list="item.children" @select="handleClick(item)"/>
+      <span
+        v-if="item.aside"
+        class="aside"
+        :class="{ active: item.isSelect }"
+        @click="handleClick(item)"
+        >{{ item.aside }} 篇</span
+      >
+      <RightHierarchyList :list="item.children" @select="handleClick(item)" />
     </li>
   </ul>
 </template>
@@ -21,7 +28,9 @@ export default {
   },
   methods: {
     handleClick(item) {
-      this.$emit("select", item);
+      if (!item.isSelect) {
+        this.$emit("select", item);
+      }
     },
   },
 };
@@ -30,11 +39,11 @@ export default {
 <style scoped lang="less">
 @import "~@/assets/css/varColor.less";
 
-.RightHierarchyList {
+.rightHierarchyList {
   list-style: none;
   padding: 0;
 
-  .RightHierarchyList {
+  .rightHierarchyList {
     margin-left: 1em;
   }
   li {
@@ -46,8 +55,10 @@ export default {
       font-weight: bold;
     }
   }
-}
-.active {
-  color: red;
+  .aside {
+    margin-left: 1em;
+    color: @gray;
+    font-size: 12px;
+  }
 }
 </style>
