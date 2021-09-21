@@ -32,6 +32,6 @@ import * as blogApi from "./api/blog"
 //   console.log("博客分类的数据", res);
 // })
 
-blogApi.getBlog(2, 20, 3).then( (res) => {
-  console.log("saiojdosjd", res)
+blogApi.getComments(2, 20, 3).then((res) => {
+  console.log(res)
 })
