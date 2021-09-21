@@ -25,13 +25,13 @@ new Vue({
 
 
 // 测试mock数据接口
-import * as blogApi from "./api/blog"
+// import * as blogApi from "./api/blog"
 
 
-blogApi.getBlogTypes().then((res) => {
-  console.log("博客分类的数据", res);
-})
+// blogApi.getBlogTypes().then((res) => {
+//   console.log("博客分类的数据", res);
+// })
 
-blogApi.getBlogs(2, 20, 3).then( (res) => {
-  console.log("分页博客的数据", res)
-})
+// blogApi.getBlogs(2, 20, 3).then( (res) => {
+//   console.log("分页博客的数据", res)
+// })
