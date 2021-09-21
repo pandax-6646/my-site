@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import toast from '../utils/toast'
+import toast from '../utils/Toast'
 
 // 创建axios实例
 const ins = Axios.create();

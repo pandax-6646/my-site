@@ -3,7 +3,7 @@ import "./mock"     //导入moke数据
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import toast from './utils/toast'
+import toast from './utils/Toast'
 
 import vLoading from "./directive/loading"
 

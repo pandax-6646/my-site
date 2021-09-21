@@ -1,5 +1,5 @@
 <template>
-  <RightHierarchyList :list="list" @select="handleSelect"></RightHierarchyList>
+  <RightHierarchyList :list="list" @select="handleSelect" />
 </template>
 
 <script>
@@ -38,10 +38,10 @@ export default {
   },
   components: { RightHierarchyList },
   methods: {
-    handleSelect (item) {
+    handleSelect(item) {
       console.log(item.name, item.isSelect);
-    }
-  }
+    },
+  },
 };
 </script>
 
