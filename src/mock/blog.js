@@ -294,7 +294,7 @@ Mock.mock('/api/comment', 'post', {
   },
 })
 
-
+// 获取评论
 Mock.mock(/^\/api\/comment(\?.+)?$/, 'get', function (options) {
   let query = qs.parse(options.url);
   return Mock.mock({

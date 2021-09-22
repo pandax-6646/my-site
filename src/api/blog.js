@@ -19,7 +19,7 @@ export async function getBlogTypes() {
 }
 
 
-// 获取单个博客
+// 获取博客详情
 export async function getBlog(id) {
   return await request.get(`/api/blog/${id}`);
 }

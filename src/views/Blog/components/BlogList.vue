@@ -93,6 +93,7 @@ export default {
         limit: this.routeInfo.limit,
         page: newPage,
       };
+
       // 跳转时有分类
       if (this.routeInfo.categoryId === -1) {
         this.$router.push({
@@ -118,7 +119,7 @@ export default {
       this.$refs.blog_list.scrollTop = 0;
       this.isLoading = true;
       this.data = await this.fetchData();
-      this.isLoading = false;
+      // this.isLoading = false;
     },
   },
 };
