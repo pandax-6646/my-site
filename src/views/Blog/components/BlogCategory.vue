@@ -89,7 +89,7 @@ export default {
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 1em;
-    margin: 0px;
+    //margin: 0px;
   }
 }
 </style>

@@ -1,12 +1,13 @@
 <template>
   <div>
     <h2>目录</h2>
-    <RightHierarchyList :list="toc" @select="handleSelect" />
+    <RightHierarchyList :list="toc" @select="handleSelect"/>
   </div>
 </template>
 
 <script>
 import RightHierarchyList from "./RightHierarchyList";
+
 export default {
   components: {
     RightHierarchyList,
@@ -25,6 +26,7 @@ export default {
       location.hash = item.anchor;
     },
   },
+  computed: {}
 };
 </script>
 

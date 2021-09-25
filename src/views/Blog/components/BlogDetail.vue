@@ -7,14 +7,18 @@
       <a href="#">评论: {{ blog.commentNumber }}</a>
       <a href="#">{{ blog.category && blog.category.name }}</a>
     </div>
-    <div v-html="blog.htmlContent" class="markdown-body" />
+    <div v-html="blog.htmlContent" class="markdown-body"/>
+    <BlogComment/>
   </div>
 </template>
 
 <script>
-import formatTime from "@/utils/formatTime";
+import formatTime from '@/utils/formatTime';
 import "highlight.js/styles/github.css";
+import BlogComment from "./BlogComment";
+
 export default {
+  components: {BlogComment},
   props: {
     blog: {
       type: Object,
@@ -35,6 +39,7 @@ export default {
   font-size: 12px;
   color: @gray;
   margin-bottom: 30px;
+
   span,
   a {
     margin-right: 10px;
