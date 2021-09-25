@@ -13,7 +13,6 @@ export default function(defaultData = null) {
 
     async created() {
       this.data = await this.fetchData();
-      console.log(this.data);
       this.isLoading = false;
     },
   };

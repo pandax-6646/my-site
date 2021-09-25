@@ -5,6 +5,7 @@
     @submit.prevent="handleSubmit"
     class="data-form-container"
   >
+    <h3>评论</h3>
     <div class="form-item">
       <div class="input-area">
         <input
@@ -63,18 +64,20 @@ export default {
       }
       this.isSubmiting = true; // 正在提交，防止重复点击
       this.$emit("submit", this.formData, (successMsg) => {
-        this.$showMessage({
+        this.$toast({
           content: successMsg,
           type: "success",
           duration: 1000,
           container: this.$refs.form,
+
+          // 让父组件来处理事件
           callback: () => {
             this.isSubmiting = false;
             this.formData.nickname = "";
             this.formData.content = "";
           },
         });
-      }); // 让父组件来处理事件
+      });
     },
   },
 };
