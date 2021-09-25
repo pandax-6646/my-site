@@ -1,5 +1,5 @@
 <template>
-  <div class="test-container" >
+  <div class="test-container">
     <Loading v-if="isLoading" />
     <button @click="handleLoading">切换</button>
   </div>
@@ -8,24 +8,24 @@
 <script>
 import Loading from "./";
 export default {
-  data () {
+  data() {
     return {
       isLoading: true,
-    }
+    };
   },
   components: {
     Loading,
   },
   methods: {
-    handleLoading () {
+    handleLoading() {
       this.isLoading = !this.isLoading;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped lang="less">
-.test-container{
+.test-container {
   position: relative;
   height: 100%;
   width: 100%;

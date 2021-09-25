@@ -142,7 +142,7 @@ export default {
     position: absolute;
     left: 0px;
     top: 0px;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
   .title,
   .desc {

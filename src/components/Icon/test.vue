@@ -42,8 +42,8 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.content .iCon{
-    margin: 1em;
+.content .iCon {
+  margin: 1em;
   text-align: center;
 }
 </style>

@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       originLoaded: false,
-      originShow: false
+      originShow: false,
     };
   },
 
@@ -48,11 +48,10 @@ export default {
       this.originLoaded = true;
 
       // 原图的清晰度为1时才让占位图片消失
-      setTimeout( () => {
+      setTimeout(() => {
         this.originShow = true;
-        this.$emit('load');
-      }, this.duration * 3)
-      
+        this.$emit("load");
+      }, this.duration * 3);
     },
   },
 };

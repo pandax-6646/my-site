@@ -1,7 +1,6 @@
-import Mock from 'mockjs'
+import Mock from "mockjs";
 
-
-Mock.mock('/api/banner', 'get', {
+Mock.mock("/api/banner", "get", {
   code: 0,
   msg: "",
   data: [
@@ -26,8 +25,5 @@ Mock.mock('/api/banner', 'get', {
       title: "听我怒吼",
       description: "兰尼斯特有债必偿",
     },
-  ]
-})
-
-
-
+  ],
+});

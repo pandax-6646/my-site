@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>目录</h2>
-    <RightHierarchyList :list="toc" @select="handleSelect"/>
+    <RightHierarchyList :list="toc" @select="handleSelect" />
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
       location.hash = item.anchor;
     },
   },
-  computed: {}
+  computed: {},
 };
 </script>
 

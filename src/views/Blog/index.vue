@@ -12,12 +12,12 @@ import Layout from "@/components/Layout";
 import BlogList from "./components/BlogList";
 import BlogCategory from "./components/BlogCategory";
 export default {
-  name:"blog",
- 
+  name: "blog",
+
   components: {
     Layout,
     BlogList,
-    BlogCategory
+    BlogCategory,
   },
 };
 </script>

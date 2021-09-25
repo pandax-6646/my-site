@@ -1,17 +1,17 @@
 <template>
   <form
-      id="data-form-container"
-      ref="form"
-      @submit.prevent="handleSubmit"
-      class="data-form-container"
+    id="data-form-container"
+    ref="form"
+    @submit.prevent="handleSubmit"
+    class="data-form-container"
   >
     <div class="form-item">
       <div class="input-area">
         <input
-            type="text"
-            maxlength="10"
-            v-model="formData.nickname"
-            placeholder="用户昵称"
+          type="text"
+          maxlength="10"
+          v-model="formData.nickname"
+          placeholder="用户昵称"
         />
         <span class="tip">{{ formData.nickname.length }}/10</span>
       </div>
@@ -20,9 +20,9 @@
     <div class="form-item">
       <div class="text-area">
         <textarea
-            maxlength="300"
-            placeholder="输入内容"
-            v-model="formData.content"
+          maxlength="300"
+          placeholder="输入内容"
+          v-model="formData.content"
         ></textarea>
         <span class="tip">{{ formData.content.length }}/300</span>
       </div>

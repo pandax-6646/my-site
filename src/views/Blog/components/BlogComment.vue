@@ -1,11 +1,11 @@
 <template>
   <div class="blog-comment-container">
     <MessageArea
-        title="评论列表"
-        :subTitle="`(${data.total})`"
-        :list="data.rows"
-        :isListLoading="isLoading"
-        @submit="handleSubmit"
+      title="评论列表"
+      :subTitle="`(${data.total})`"
+      :list="data.rows"
+      :isListLoading="isLoading"
+      @submit="handleSubmit"
     />
   </div>
 </template>
@@ -13,10 +13,10 @@
 <script>
 import MessageArea from "@/components/MessageArea";
 import fetchData from "@/mixins/getRemoteData";
-import {getComments, addComment} from "@/api/blog";
+import { getComments, addComment } from "@/api/blog";
 
 export default {
-  mixins: [fetchData({total: 0, rows: []})],
+  mixins: [fetchData({ total: 0, rows: [] })],
   components: {
     MessageArea,
   },

@@ -1,11 +1,11 @@
 <template>
   <div className="message-area-container">
-    <DataForm v-on="$listeners"/>
+    <DataForm v-on="$listeners" />
     <h3>
       {{ title }}
       <span>{{ subTitle }}</span>
     </h3>
-    <DataList :list="list"/>
+    <DataList :list="list" />
     <div className="loading" v-loading="isListLoading"></div>
   </div>
 </template>

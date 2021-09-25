@@ -21,19 +21,19 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import '~@/assets/css/mixin.less';
-@import '~@/assets/css/varColor.less';
+@import "~@/assets/css/mixin.less";
+@import "~@/assets/css/varColor.less";
 .empty-container {
   // 水平垂直居中
   .self-center();
   color: @gray;
 }
 
-.icon-container{
+.icon-container {
   font-size: 72px;
 }
 
-p{
+p {
   text-align: center;
 }
 </style>

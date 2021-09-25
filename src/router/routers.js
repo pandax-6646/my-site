@@ -5,7 +5,6 @@ import BlogDetail from "@/views/Blog/Detail";
 import Message from "@/views/Message";
 import Project from "@/views/Project";
 
-
 export default [
   { name: "Home", path: "/", component: Home },
   { name: "About", path: "/about", component: About },
@@ -13,5 +12,5 @@ export default [
   { name: "CategoryBlog", path: "/blog/cate/:categoryId", component: Blog },
   { name: "BlogDetail", path: "/blog/:id", component: BlogDetail },
   { name: "Message", path: "/message", component: Message },
-  { name: "Project", path: "/project", component: Project }
-]
+  { name: "Project", path: "/project", component: Project },
+];

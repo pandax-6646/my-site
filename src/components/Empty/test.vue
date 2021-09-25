@@ -1,30 +1,27 @@
 <template>
   <div id="app" class="test">
-    <Empty  />
+    <Empty />
   </div>
 </template>
 
 <script>
 import Empty from "./";
 export default {
-  name:'test',
+  name: "test",
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     Empty,
   },
-  
 };
 </script>
 
 <style scope>
-.test{
+.test {
   position: relative;
   width: 500px;
   height: 500px;
   border: 1px solid black;
 }
-
 </style>

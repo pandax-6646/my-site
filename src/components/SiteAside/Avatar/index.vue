@@ -1,11 +1,11 @@
 <template>
   <!-- 用户头像组件 -->
-  
-  <img 
-  class="avatar-container"
-  :src="url" alt="" 
-  :style="{height: size + 'px', width: size + 'px'}" 
 
+  <img
+    class="avatar-container"
+    :src="url"
+    alt=""
+    :style="{ height: size + 'px', width: size + 'px' }"
   />
 </template>
 
@@ -19,13 +19,13 @@ export default {
     size: {
       type: Number,
       default: 150,
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-.avatar-container{
+.avatar-container {
   display: block;
   border-radius: 50%;
   background-color: #eee;

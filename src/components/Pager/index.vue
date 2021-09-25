@@ -1,7 +1,6 @@
 <template>
   <!-- 总页数大于1时才显示 -->
   <div class="pager" v-if="getPageAll > 1">
-
     <!-- 回到首页按钮 -->
     <a href="#" @click="handleClick(1)" :class="{ disabled: currPage <= 1 }"
       >|&lt;&lt;</a
@@ -25,7 +24,6 @@
     >
       {{ num }}
     </a>
-
 
     <!-- 下一页按钮 -->
     <a
@@ -108,7 +106,6 @@ export default {
 
   methods: {
     handleClick(newPage) {
-
       // 页码值左越界
       if (newPage < 1) {
         newPage = 1;
@@ -123,7 +120,6 @@ export default {
       if (newPage != this.currPage) {
         this.$emit("pageChange", newPage);
       }
-      
     },
   },
 };

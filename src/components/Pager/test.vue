@@ -17,7 +17,7 @@ export default {
     return {
       currPage: 1,
       total: 504,
-      limit: 10
+      limit: 10,
     };
   },
   components: {
@@ -26,7 +26,7 @@ export default {
   methods: {
     pageChange(newPage) {
       this.currPage = newPage;
-      console.log('加载当前第 ' + newPage + ' 页的数据')
+      console.log("加载当前第 " + newPage + " 页的数据");
     },
   },
 };

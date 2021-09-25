@@ -54,7 +54,6 @@ import Icon from "@/components/Icon";
 import getRemoteData from "@/mixins/getRemoteData";
 
 export default {
-
   // 导入混入获取数据的代码
   mixins: [getRemoteData([])],
 
@@ -87,8 +86,7 @@ export default {
     },
   },
   methods: {
-
-    async fetchData () {
+    async fetchData() {
       return await getBanners();
     },
 

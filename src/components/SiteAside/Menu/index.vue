@@ -30,7 +30,7 @@ export default {
           name: "Blog",
           icon: "blog",
           title: "文章",
-          exact: false,     //是否启用精确匹配路由路径
+          exact: false, //是否启用精确匹配路由路径
         },
         {
           name: "About",

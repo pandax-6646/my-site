@@ -6,24 +6,20 @@
 
 <script>
 import Contact from "./";
-import '@/assets/css/globalBase.less';
+import "@/assets/css/globalBase.less";
 export default {
-  name:'test',
+  name: "test",
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     Contact,
   },
-  
 };
 </script>
 
 <style>
-
-
-#test-container{
+#test-container {
   height: 600px;
   width: 400px;
   border: 1px solid black;
@@ -31,5 +27,4 @@ export default {
   margin: 0 auto;
   padding-top: 200px;
 }
-
 </style>

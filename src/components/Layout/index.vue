@@ -15,15 +15,16 @@
 
 
 <style scoped lang="less">
-.layout-container{
+.layout-container {
   display: flex;
   height: 100%;
   width: 100%;
-  .left, .right{
-    flex: 0 0  auto;
+  .left,
+  .right {
+    flex: 0 0 auto;
     overflow: hidden;
   }
-  .main{
+  .main {
     flex: 1 1 auto;
     overflow: hidden;
   }
