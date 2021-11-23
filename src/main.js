@@ -3,7 +3,7 @@ import "./mock"; //导入moke数据
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import toast from "./utils/toast";
+import toast from "./utils/Toast";
 
 import vLoading from "./directive/loading";
 
@@ -14,6 +14,7 @@ import "./assets/css/globalBase.less";
 
 // 注册全局的自定义组件
 Vue.directive("loading", vLoading);
+Vue.prototype.$bus = new Vue({});
 
 new Vue({
   router,

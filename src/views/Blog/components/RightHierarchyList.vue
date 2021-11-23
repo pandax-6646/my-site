@@ -11,7 +11,7 @@
         @click="handleClick(item)"
         >{{ item.aside }} 篇</span
       >
-      <RightHierarchyList :list="item.children" @select="handleClick(item)" />
+      <RightHierarchyList :list="item.children" @select="handleClick" />
     </li>
   </ul>
 </template>

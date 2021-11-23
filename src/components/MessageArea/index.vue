@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import DataForm from "./DataForm";
-import DataList from "./DataList";
+import DataForm from "./dataForm";
+import DataList from "./dataList";
 
 export default {
   props: {

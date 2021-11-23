@@ -1,7 +1,7 @@
 <template>
   <div class="bolg-datail-contailer" v-loading="isLoading">
     <Layout>
-      <div class="main-container">
+      <div class="main-container" ref="mainContainer">
         <BlogDetail :blog="data" v-if="data" />
       </div>
       <template #right>
@@ -26,10 +26,27 @@ export default {
     BlogDetail,
     BlogTOC,
   },
+
   methods: {
     async fetchData() {
       return await getBlog(this.$route.params.id);
     },
+    handleScroll() {
+      this.$bus.$emit("mainScroll", this.$refs.mainContainer);
+    },
+  },
+  mounted() {
+    this.$refs.mainContainer.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    this.$refs.mainContainer.removeEventListener("scroll", this.handleScroll);
+  },
+  updated() {
+    const hash = location.hash;
+    location.hash = '';
+    setTimeout( () => {
+      location.hash = hash;
+    }, 20)
   },
 };
 </script>
